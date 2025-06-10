@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AI.LearningPlatform (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "AI.LearningPlatform (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
