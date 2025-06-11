@@ -20,9 +20,9 @@ namespace AI.LearningPlatform.DAL.Models
        [BsonElement("phone")]
        public string Phone { get; set; } = string.Empty;
 
-        //public List<Lesson> LearningHistory { get; set; } = new List<Lesson>();
+        public List<Lesson> LearningHistory { get; set; } = new List<Lesson>();
 
-       public static object Find<T>(Func<object, bool> value)
+        public static object Find<T>(Func<object, bool> value)
        {
            throw new NotImplementedException();
        }

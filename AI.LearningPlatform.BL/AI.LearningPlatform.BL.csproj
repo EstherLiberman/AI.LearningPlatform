@@ -7,6 +7,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\AI.LearningPlatform.DAL\AI.LearningPlatform.DAL.csproj" />
+		<PackageReference Include="Betalgo.OpenAI" Version="8.7.2" />
 		<PackageReference Include="OpenAI" Version="2.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Options" Version="9.0.0" />
 	</ItemGroup>
