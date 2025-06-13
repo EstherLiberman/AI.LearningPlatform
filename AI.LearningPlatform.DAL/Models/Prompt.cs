@@ -31,12 +31,12 @@ namespace AI.LearningPlatform.DAL.Models
         //public string Text { get; internal set; }
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string ?Id { get; set; }
-        public string ?UserId { get; set; } // המשתמש שלמד את השיעור
-        public string ?CategoryId { get; set; }
-        public string ?SubCategoryId { get; set; }
-        public string ?PromptText { get; set; } // ההנחיה המקורית שנשלחה ל-AI
-        public string ?GeneratedContent { get; set; } // התוכן של השיעור שנוצר על ידי ה-AI
-        public DateTime ?DateCreated { get; set; } = DateTime.UtcNow; // תאריך יצירת השיעור
+        public string Id { get; set; }=string.Empty;
+        public string UserId { get; set; } = string.Empty; // המשתמש שלמד את השיעור
+        public string CategoryId { get; set; } = string.Empty;
+        public string SubCategoryId { get; set; } = string.Empty;
+        public string PromptText { get; set; } = string.Empty; // ההנחיה המקורית שנשלחה ל-AI
+        public string GeneratedContent { get; set; } = string.Empty; // התוכן של השיעור שנוצר על ידי ה-AI
+        public DateTime DateCreated { get; set; } = DateTime.UtcNow; // תאריך יצירת השיעור
     }
 }

@@ -31,5 +31,19 @@ namespace AI.LearningPlatform.Server.Controllers
             return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
         }
 
+        [HttpGet("search")]
+        public async Task<ActionResult<User>> GetByNameAndPhone([FromQuery] string name, [FromQuery] string phone)
+        {
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(phone))
+                return BadRequest("יש לספק גם שם וגם טלפון.");
+
+            var user = await _userService.GetUserByNameAndPhoneAsync(name, phone);
+
+            if (user == null)
+                return NotFound("לא נמצא משתמש עם הפרטים שסופקו.");
+
+            return Ok(user);
+        }
+
     }
 }

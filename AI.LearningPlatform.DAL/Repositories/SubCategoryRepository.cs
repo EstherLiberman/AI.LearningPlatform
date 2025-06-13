@@ -1,5 +1,4 @@
-﻿
-using AI.LearningPlatform.DAL.Models;
+﻿using AI.LearningPlatform.DAL.Models;
 using MongoDB.Driver;
 
 public class SubCategoryRepository

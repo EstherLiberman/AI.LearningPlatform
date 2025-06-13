@@ -26,6 +26,11 @@ namespace AI.LearningPlatform.BL.Services
         {
             await _userRepository.AddAsync(user);
         }
+        public async Task<User?> GetUserByNameAndPhoneAsync(string name, string phone)
+        {
+            return await _userRepository.GetByNameAndPhoneAsync(name, phone);
+        }
+
 
 
     }

@@ -1,5 +1,4 @@
-﻿
-using AI.LearningPlatform.DAL.Models;
+﻿using AI.LearningPlatform.DAL.Models;
 using MongoDB.Driver;
 
 public class UserRepository
@@ -26,4 +25,11 @@ public class UserRepository
 
     public async Task UpdateUserAsync(User user) =>
         await _collection.ReplaceOneAsync(u => u.Id == user.Id, user);
+
+    public async Task<User?> GetByNameAndPhoneAsync(string name, string phone)
+    {
+        return await _collection.Find(u => u.Name == name && u.Phone == phone).FirstOrDefaultAsync();
+    }
+   
+
 }

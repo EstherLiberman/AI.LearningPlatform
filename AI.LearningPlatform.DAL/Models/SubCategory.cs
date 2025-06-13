@@ -12,13 +12,13 @@ namespace AI.LearningPlatform.DAL.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         [BsonElement("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; } = string.Empty;
 
         [BsonElement("categoryId")]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string CategoryId { get; set; }
+        public string? CategoryId { get; set; } = string.Empty;
     }
 }
